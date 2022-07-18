@@ -1,0 +1,5 @@
+resource wapc {
+  init-guest-request: func(operation: string, payload: list<u8>) -> u32
+  on-host-response: func(id: u32, code:u32, bytes: list<u8>)
+  on-host-error: func(id: u32, bytes: list<u8>)
+}
